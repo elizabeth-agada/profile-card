@@ -1,10 +1,6 @@
-function updateUTCTime() {
-    const utcTimeElement = document.getElementById('utcTime');
+function updateTime() {
+    const utcTimeElement = document.getElementById("utcTime");
     const now = new Date();
-    const utcTime = now.toUTCString();
-    utcTimeElement.textContent = utcTime;
+    utcTimeElement.textContent = "UTC Time: " + now.toUTCString();
 }
-
-setInterval(updateUTCTime, 1000);
-
-document.addEventListener('DOMContentLoaded', updateUTCTime);
+updateTime();
